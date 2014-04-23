@@ -1,0 +1,42 @@
+h1, h2, h3, h4, h5, h6 {
+  font-family: Tahoma, sans-serif;
+  text-align: center;
+}
+
+a {
+	text-decoration: none;
+	color: #7AC7A8;
+}
+
+a:visited{
+	color: #2A5C4C;
+}
+a:hover {
+	color: #2E8B66;
+}
+
+body {
+	font-family: Verdana;
+	font-size: .8em;
+}
+
+ol {
+	color: white;
+	text-transform: uppercase;
+}
+
+#one {
+	background-color: navy;
+}
+
+#two {
+	background-color: black;
+}
+
+#three {
+	background-color: purple;
+}
+
+.heading {
+	color: #00ff00;
+}
