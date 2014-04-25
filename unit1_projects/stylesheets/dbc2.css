@@ -1,8 +1,8 @@
 *, *:before, *:after {
-  -moz-box-sizing: border-box;
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box;
- }
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
 
 a {text-decoration: none}
 a:link {color:#96CDCD;}
@@ -27,27 +27,27 @@ header {
 
 .page-wrap {
 	width: 80%;
-  margin: auto;
+	margin: auto;
 }
 
 .main {
-  overflow: hidden;
-  color: white;
-  padding-left: 20px;
+	overflow: hidden;
+	color: white;
+	padding-left: 20px;
 }
 
 .col {
-  float: left;
-  padding-right: 20px;
+	float: left;
+	padding-right: 20px;
 }
 
 #content{
-  width: 75%;
+	width: 75%;
 }
 
 #sidebar{
-  width: 25%;
-  text-align: right;
+	width: 25%;
+	text-align: right;
 }
 
 .module{
@@ -73,14 +73,14 @@ footer {
 }
 
 .image h2 { 
-   position: absolute; 
-   top: 75px; 
-   text-align: right;
-   width: 100%; 
+	position: absolute; 
+	top: 75px; 
+	text-align: right;
+	width: 100%; 
 }
 
 h2 span { 
-   color: white; 
-   background: rgba(0, 0, 0, 0.7);
-   padding: 12px; 
+	color: white; 
+	background: rgba(0, 0, 0, 0.7);
+	padding: 12px; 
 }
