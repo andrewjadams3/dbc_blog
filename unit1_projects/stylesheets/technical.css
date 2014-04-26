@@ -1,0 +1,107 @@
+*, *:before, *:after {
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+a {text-decoration: none}
+a:link {color:black;}
+a:visited {color:black;}
+a:hover {color:#3F92D2;}
+
+body {
+  font-family: 'Droid Serif', 'serif';
+}
+
+.wrapper {
+  width: 75%;
+  margin: auto;
+}
+
+header{
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+#header-text {
+  font-size: 40px;
+  font-weight: bold;
+  line-height: 30px;
+  text-align: center;
+  padding: 5px 20px;
+}
+
+.main {
+  overflow: hidden;
+}
+
+.sidebar {
+  float: left;
+  width: 20%;
+  padding-right: 20px;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+.content {
+  float: right;
+  width: 80%;
+}
+
+.post-heading{
+  overflow: hidden;
+  border-bottom: 2px solid #666;
+  position: relative;
+  padding-top: 40px
+}
+
+.post-title {
+  font-size: 24px;
+  font-weight: bold;
+  position: absolute;
+  bottom: 1px;
+  left: 0;
+}
+
+.post-date {
+  text-align: right;
+  color: #999;
+  position: absolute;
+  bottom: 1px;
+  right: 0;
+}
+
+.post-content {
+  padding-top: 10px;
+}
+
+.post-image {
+  float:right;
+  box-shadow: 4px 4px 10px #999;
+}
+
+.post-content a {
+  text-decoration: underline;
+}
+
+.article-heading {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.module {
+  padding: 5px 20px;
+}
+
+footer {
+  padding-top: 20px;
+}
+
+#footer-text {
+  font-size: 12px;
+  text-align: center;
+  padding: 5px 20px;
+}
