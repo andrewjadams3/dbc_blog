@@ -1,6 +1,7 @@
 /* General Styles */
 body {
   background-color: rgb(241, 241, 241);
+  font-family: 'Lato', Arial, sans-serif;
   font-size: 16px;
   font-weight: 300;
   line-height: 1.2em;
@@ -18,7 +19,12 @@ a {
   text-decoration: none;
 }
 
+a:hover {
+  color: #BC2F36;
+}
+
 h1 {
+  font-family: 'Audiowide', cursive;
   font-size: 2.2em;
   float: left;
   line-height: 75px;
@@ -27,6 +33,7 @@ h1 {
 h2 {
   background-color: rgb(60, 60, 60);
   color: #FFF;
+  font-family: 'Quicksand', sans-serif;
   font-size: 2.4em;
   font-weight: 400;
   line-height: 80px;
@@ -35,6 +42,7 @@ h2 {
 }
 
 h3 {
+  font-family: 'Quicksand', sans-serif;
   font-size: 1.4em;
   font-weight: 700;
   margin: 0 0 0.3em 0;
@@ -48,10 +56,10 @@ h4 {
 }
 
 /* Navigation */
-.nav li {
+nav li {
   float: left;
 }
-.nav li a {
+nav li a {
   color: #fff;
   margin: 0 10px;
   padding: 5px 10px;
@@ -60,6 +68,7 @@ h4 {
 
 .jump {
   color: #565656;
+  font-family: 'EntypoRegular';
   font-size: 70px;
   line-height: 80px;
   position: absolute;
@@ -75,34 +84,33 @@ h4 {
 
 
 /* Header */
-#header {
+header {
   background-color: #009D92;
   padding: 10px;
 }
-#header h1 {
+header h1 {
   color: #FFEECC;
   background: url('../images/icons/it.png') no-repeat 0 50%;
   padding-left: 40px;
 }
-#header .nav {
+header nav {
   float: right;
   font-size: 1.2em;
   margin-left: 20px;
 }
-#header .nav li {
+header nav li {
   line-height: 75px;
 }
 
-#header:after {
+header:after {
   /* clearfix hack */
   content: "";
   display: table;
   clear: both;
 }
 
-
 /* Main */
-#main div {
+#main section {
   margin-bottom: 1em;
   position: relative;
 }
@@ -121,7 +129,7 @@ h4 {
 
 
 /* Famous Women */
-#famous div.woman {
+#famous article.woman {
   background-color: white;
   float: left;
   min-height: 250px;
@@ -130,11 +138,11 @@ h4 {
   width: 27.33%;
 }
 
-#famous div.break {
+#famous article.break {
   clear: both;
 }
 
-#famous div img {
+#famous article img {
   display: block;
   margin: 1em auto;
   width: 100%;
@@ -179,22 +187,32 @@ h4 {
   padding-left: 5px;
 }
 
-
-
 /* Footer */
-#footer {
+footer {
   background-color: #00665F;
 }
 
-#footer .nav {
+footer nav {
   float: left;
   font-size: 1.1em;
   margin: 10px;
 }
 
-#footer:after {
+footer:after {
   /* clearfix hack */
   content: "";
   display: table;
   clear: both;
+}
+
+/* Fonts */
+@font-face {
+  font-family: 'EntypoRegular';
+  src: url('font/Entypo-webfont.eot');
+  src: url('font/Entypo-webfont.eot?#iefix') format('embedded-opentype'),
+       url('font/Entypo-webfont.woff') format('woff'),
+       url('font/Entypo-webfont.ttf') format('truetype'),
+       url('font/Entypo-webfont.svg#EntypoRegular') format('svg');
+  font-weight: normal;
+  font-style: normal;
 }
