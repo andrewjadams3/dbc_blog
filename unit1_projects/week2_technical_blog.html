@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" type="text/css" href="stylesheets/technical.css">
+  <link href='http://fonts.googleapis.com/css?family=Droid+Serif' rel='stylesheet' type='text/css'>
+  <title>Technical Blog</title>
+</head>
+<body>
+  
+  <div class="wrapper">
+    
+    <header>
+      <div id="header-text">
+        <a href="#">DBC Blog</a><br/>
+        <span class="article-heading">Week 2 Technical Blog</span>
+      </div>
+    </header>
+    
+    <div class="main">
+      
+      <div class="sidebar">
+        <div class="module">
+          <div class="post-heading">
+            <div class="post-title">Links</div>
+          </div>
+          <div class="post-content">
+            <ul>
+              <li><a href="http://andrewada.ms/dbc_blog/unit1_projects/practice/">Intermediate HTML/CSS</a></li>
+              <li><a href="http://andrewada.ms/dbc_blog/unit1_projects/practice2/">Responsve HTML/CSS</a></li>
+              <li><a href="http://andrewada.ms/dbc_blog/unit1_projects/GPS1_1/gps1.1.html">GPS 1.1</a></li>
+              <li><a href="http://andrewada.ms/dbc_blog/unit1_projects/week2_technical_blog.html">Week 2 Technical Blog</a></li>
+              <li><a href="http://andrewada.ms" target="_blank">Personal Blog</a><br/>
+            </ul>
+          </div>
+        </div>
+      </div>
+      
+      <div class="content">
+        <div class="module">
+          <div class="post-heading">
+            <div class="post-title"><a href="#">Inline vs. Inline Block</a></div>
+            <div class="post-date">May 4, 2014</div>
+          </div>
+          <div class="post-content">
+            This week, I will explore the differences between inline elements and inline-block elements. To gain a better understanding, let's first take a look at plain-old block elements.<br><br>
+            <span class="article-heading">Block</span><br/>
+            Block elements are characterized by a line break before and after the element. This means that block elements cannot sit side-by-side. For example, if you created two paragraphs (which are default block-elements) like so:
+            <div class="codeblock">
+<pre>
+&lt;p&gt;Paragraph 1&lt;/p&gt;
+&lt;p&gt;Paragraph 2&lt;/p&gt;
+</pre>
+            </div>
+            they would sit on top of each other, not next to each other. Block elements can have set height, width, margin, and padding, which are all respected by surrounding elements.<br/><br/>
+
+            <span class="article-heading">Inline</span><br/>
+            Inline elements are essentially the opposite of block elements. These elements do not force line breaks, meaning that other elements can sit next to them. Using the paragraph example from before, we can add the following lines of CSS to force the paragraphs to sit next to each other:
+            <div class="codeblock">
+<pre>
+p {
+  display: inline;
+}
+</pre>
+            </div>
+            We can even add some margin to space them apart:
+            <div class="codeblock">
+<pre>
+p {
+  display: inline;
+  margin: 10px;
+}
+</pre>
+            </div>
+            However, it is important to note that while left and right margins are respected by other elements, the top and bottom margins are not. Inline elements also cannot have a set height or width. That's where inline-block comes in.<br/><br/>
+
+            <span class="article-heading">Inline-Block</span><br/>
+            Inline-block elements contain the best parts of block elements and inline elements. By setting our paragraphs to inline-block...
+            <div class="codeblock">
+<pre>
+p {
+  display: inline-block;
+  margin: 10px;
+}
+</pre>
+            </div>
+            ...we allow them to not only sit next to each other, but also force any elements above or below to respect the 10px margin. This means that inline-block elements behave very similarly to floats. However, unlike floats, inline-block elements will not cause any issues with collapsing parent containers. Pretty cool!<br><br>
+
+            For more information and example uses of inline-block elements, check out this article on <a href="http://learnlayout.com/inline-block.html" target="_blank">learnlayout.com</a>.
+          </div>
+        </div>
+      </div>
+      
+    </div>
+    
+    <footer>
+      <div id="footer-text">
+        <p>Copyright &copy; 2014 - <a href="http://andrewada.ms" target="_blank">Andrew Adams</a></p>
+      </div>
+    </footer>
+  </div>
+</body>
+</html>
