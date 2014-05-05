@@ -1,0 +1,203 @@
+*, *:before, *:after {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+a {text-decoration: none}
+a:link {color: #BC0000;}
+a:visited {color: #BC0000;}
+a:hover {color: #D54646;}
+
+body {
+	font-family: 'Raleway', sans-serif;
+	font-weight: 200;
+	background-image: url(../images/greyzz.png); 
+}
+
+#page-wrap {
+	margin: auto;
+	width: 100%;
+	max-width: 850px;
+}
+
+/* Header */
+header {
+	width: 100%;
+	padding: 20px;
+	text-align: right;
+	overflow: hidden;
+}
+
+#gravatar {
+	border-radius: 50% 50% 50% 50%;
+}
+
+#gravatar-div {
+	float: left;
+}
+
+#header-title {
+	margin-top: 35px;
+	font-size: 2.250em;
+}
+
+#header-sub {
+	font-size: 1.25em;
+	color: #777;
+}
+
+#adams {
+	font-weight: 700;
+	color: #BC0000;
+}
+
+#adams-small {
+	display: none;
+}
+
+#andrew-small {
+	display: none;
+}
+
+/* Navigation */
+nav {
+	width: 100%;
+	margin-bottom: 20px;
+	overflow: hidden;
+}
+
+.nav-button {
+	color: white;
+	float: left;
+	width: 25%;
+	height: 25px;
+	line-height: 25px;
+	text-align: center;
+	vertical-align: middle;
+	background-color: #BC0000;
+	border-left: 2px solid #C50D0D;
+	border-right: 2px solid #AA1010;
+}
+
+.nav-button:hover {
+	background-color: #CD2D2D;
+	border-left: 2px solid #CD2D2D;
+}
+
+/* Content */
+.content {
+	padding: 20px;
+}
+
+.post-date {
+	color: #777;
+	font-size: 1.125em;
+	margin-bottom: 5px;
+}
+
+.post-title {
+	font-size: 2em;
+	font-weight: bold;
+	margin-bottom: 20px;
+}
+
+.post {
+	font-size: 1.125em;
+	font-weight: 300;
+	letter-spacing: 1px;
+	line-height: 25px;
+}
+
+.post p {
+	margin-bottom: 15px;
+}
+
+/* Footer */
+footer {
+	width: 100%;
+	padding: 20px;
+	border-top: 2px solid #C50D0D;
+	margin: auto;
+}
+
+#icons {
+	display: inline;
+	font-size: 1.25em;
+}
+
+#copyright {
+	display: inline;
+}
+
+/* Small Screen */
+@media screen and (max-width: 540px){
+	/* Header */
+	header {
+		text-align: center;
+	}
+
+	#gravatar-div {
+		display: inline-block;
+		float: none;
+		width: 125px;
+		margin: 0 auto;
+	}
+
+	#andrew-small {
+		display:inline-block;
+		vertical-align: top;
+		font-size: 1.75em;
+		margin-top: 50px;
+	}
+
+	#adams-small {
+		display:inline-block;
+		vertical-align: top;
+		font-size: 1.75em;
+		font-weight: 700;
+		color: #BC0000;
+		margin-top: 50px;
+	}
+
+	#header-title {
+		display: none;
+	}
+
+	#header-sub {
+		display: none;
+	}
+
+	/* Navigation */
+	.nav-button {
+		display: block;
+		width: 100%;
+		height: 40px;
+		line-height: 40px;
+		border-top: 2px solid #C50D0D;
+		border-bottom: 2px solid #AA1010;
+	}
+
+	.nav-button:hover {
+		border-top: 2px solid #CD2D2D;
+	}
+
+	/* Footer */
+	#icons {
+		text-align: center;
+		display: block;
+		margin: 0 auto 20px auto;
+		width: 75%;
+	}
+
+	#copyright {
+		text-align: center;
+		display: block;
+		margin: 0 auto;
+		width: 75%;
+	}
+
+	#icon-spacer {
+		display: none;
+	}
+}
