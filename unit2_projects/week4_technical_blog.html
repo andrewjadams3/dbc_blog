@@ -36,7 +36,7 @@
 a = [1, 2, 3]
 b = {1: a, 2: b, 3: c}
 a.cycle { |x| puts x } # ==> print 1, 2, 3, 1, 2, 3... forever.
-b.cycle(3) { |k, v| puts v } # ==> print a, b, c, a, b, c.</pre>
+b.cycle(2) { |k, v| puts v } # ==> print a, b, c, a, b, c.</pre>
 				</div>
 				<p>Obviously, more complex code can be called within the block than what was just shown, but it serves as a good illustration. Be extremely careful calling #cycle without passing a number as an argument, as it will result in an infinite loop if you do not designate a break or stopping condition inside the loop (as I learned the hard way!)</p>
 			</div>
