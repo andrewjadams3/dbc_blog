@@ -113,6 +113,11 @@ nav {
 	margin-bottom: 15px;
 }
 
+.post-image {
+  float:right;
+  box-shadow: 4px 4px 10px #999;
+}
+
 /* Footer */
 footer {
 	width: 100%;
