@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Andrew Adams | DBC</title>
+	<meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0">
+	<link rel="stylesheet" type="text/css" href="../stylesheets/reset.css">
+	<link rel="stylesheet" type="text/css" href="../stylesheets/style.css">
+	<link href='http://fonts.googleapis.com/css?family=Raleway:200,300,700' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" href="../font-awesome/css/font-awesome.min.css">
+</head>
+<body>
+	<div id="page-wrap">
+		<header>
+			<h1 id="andrew-small">Andrew</h1>
+			<div id="gravatar-div"><img src="http://www.gravatar.com/avatar/5591d19f8a18d8147b479d097b5c5f07?s=125" id="gravatar" /></div>
+			<h1 id="header-title">Andrew <span id="adams">Adams</span></h1>
+			<h2 id="header-sub">Learning Full Stack Rails Development</h2>
+			<h1 id="adams-small">Adams</h1>
+		</header>
+
+		<nav>
+			<a href="#"><div class="nav-button">Home</div></a>
+			<a href="#"><div class="nav-button">About</div></a>
+			<a href="#"><div class="nav-button">Projects</div></a>
+			<a href="mailto:andrewjadams3@gmail.com"><div class="nav-button">Contact</div></a>
+		</nav>
+
+		<section class="content">
+			<h3 class="post-date">May 25, 2014</h3>
+			<h2 class="post-title">Week 5 Technical Blog: Classes in Ruby</h2>
+			<div class="post">
+				<p>As you may or may not already know, everything in Ruby is an object! It's true! Look it up! Or could just trust me. I've done the research.</p>
+				<p>Each object in ruby has it's own properties and methods. Many of the built-in methods allow us to do some pretty powerful stuff. But what if we want to add our own methods? Or better yet, what if we want to create our own objects? We can do that! Check it out:</p>
+				<div class="codeblock">
+					<pre>
+class Dog
+  def initialize(name, sex, breed, weight, fur_color)
+    @name = name
+    @sex = sex
+    @breed = breed
+    @weight = weight #in pounds
+    @fur_color = fur_color
+    @pronoun = @sex == "male" ? "his" : "her"
+  end
+
+  def dig
+    "#{@name} dug a hole, and #{@pronoun}"\
+    " #{@fur_color} fur is now the color"\
+    " of dirt!"
+  end
+end</pre>
+				</div>
+				<p>Cool! We began by creating a new class: Dog. Inside this class, we definied an initialize method, which takes a number of parameters for when a new Dog is created. All the @ signs? Those are instance variables. Each instance of Dog will have those variables defined. We also created a dig method, which accesses a number of instance variables and returns a string. Let's create a new Dog and see what happens</p>
+				<div class="codeblock">
+					<pre>
+max = Dog.new("Max", "male", "Westie", 20, "white")
+puts max.dig
+
+==> Max dug a hole, and his white fur is now the color of dirt!</pre>
+				</div>
+				<p>That worked really well! But what if we wanted to create another dog who didn't dig, but instead liked to catch frisbees? We could add a catch_frisbee method to the original Dog class, but it's doubtful that our original dog, max, would ever need to do that. This is where inheritance will be useful.</p>
+				<p>Each class or object in Ruby inherits certain properties and methods from it's parent. Even without specifying it, our Dog class has a parent, and has a number of methods already built in which we didn't define. However, now that we have created our Dog class, we can also create other classes which inherit methods and properties from it. Let's refactor our code a bit to accomodate a new, frisbee-catching dog.</p>
+				<div class="codeblock">
+					<pre>
+class Dog
+  def initialize(name, sex, breed, weight, fur_color)
+    @name = name
+    @sex = sex
+    @breed = breed
+    @weight = weight #in pounds
+    @fur_color = fur_color
+    @pronoun = @sex == "male" ? "his" : "her"
+  end
+end
+
+class Terrier < Dog
+  def dig
+    "#{@name} dug a hole, and #{@pronoun}"\
+    " #{@fur_color} fur is now the color"\
+    " of dirt!"
+  end
+end
+
+class Collie < Dog
+  def catch_frisbee
+    "#{@name} chases after a frisbee at full"\
+    " sprint, leaps in the air, and catches it"\
+    " in #{@pronoun} mouth!"
+  end
+end</pre>
+				</div>
+				<p>Now we have two specific types of classes, Terrier and Collie, which both inherit the initialize method and instance variables from Dog. The Terrier class has it's own dig method, and the Collie class has it's own catch_frisbee method. Let's create a couple of examples and see how they work!</p>
+				<div class="codeblock">
+					<pre>
+max = Terrier.new("Max", "male", "Westie", 20, "white")
+puts max.dig
+
+==> Max dug a hole, and his white fur is now the color of dirt!
+
+pepper = Collie.new("Pepper", "female", "Border Collie", 35, "black")
+puts pepper.catch_frisbee
+
+==> Pepper chases after a frisbee at full sprint, 
+    leaps in the air, and catches it in her mouth!</pre>
+				</div>
+				<p>They work! If Max tried to catch a frisbee, or Pepper tried to dig, they would run into an error. While this may not be a perfect example, it certainly shows how classes can inherit certain properties from their parent classes, and then branch out on their own to accomplish specific tasks.</p>
+			</div>
+		</section>
+
+		<footer>
+			<div id="icons">
+				<a href="https://github.com/andrewjadams3" target="_blank" title="GitHub"><i class="fa fa-github-square fa-lg"></i></a>
+				<a href="https://twitter.com/andrewjadams3" target="_blank" title="Twitter"><i class="fa fa-twitter-square fa-lg"></i></a>
+				<a href="http://www.linkedin.com/in/andrewjadams3" target="_blank" title="LinkedIn"><i class="fa fa-linkedin-square fa-lg"></i></a>
+				<a href="mailto:andrewjadams3@gmail.com" title="Email"><i class="fa fa-envelope fa-lg"></i></a>
+			</div>
+			<span id="icon-spacer"> | </span>
+			<div id="copyright">Copyright &copy; 2014 - Andrew Adams</div>
+		</footer>
+	</div>
+</body>
