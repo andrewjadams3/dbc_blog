@@ -27,9 +27,31 @@
 
 		<section class="content">
 			<h3 class="post-date">June 1, 2014</h3>
-			<h2 class="post-title">Week 6 Technical Blog</h2>
+			<h2 class="post-title">Week 6 Technical Blog: Class Methods</h2>
 			<div class="post">
-				<p></p>
+				<p>Most people who are familiar with Ruby are also familiar with instance methods. Even if the terminology is new, an instance method is simply a function defined inside of a class. It is often called by an instance of the class using dot notation.</p>
+				<p>A class method is simply called on a class itself, rather than on an instance of that class. There are several ways to define a class method, but using self notation is the simplest, and in my opinion, easiest to interpret.</p>
+				<div class="codeblock">
+					<pre>
+class Dog
+  def self.method
+    puts "class method"
+  end
+
+  def method
+    puts "instance method"
+  end
+end</pre>
+				</div>
+				<p>As you can see, #self.method is the class method, and #method is the instance method! Here is how each can be called:</p>
+				<div class="codeblock">
+					<pre>
+Dog.method #=> "class method"
+
+dog_instance = Dog.new
+dog.instance.method #=> "instance method"</pre>
+				</div>
+				<p>That's all there is to it! Class methods are available everywhere, so they can be called at any time. There are many opinions about class methods, many seemingly negative. Some argue that class methods feel more like procedural programming and are difficult to refactor. Because of my limited experience, I have not yet formed an opinion. However, I have already found myself using instance methods almost exclusively, which seems to fall in line with mainstream advice.</p>
 			</div>
 		</section>
 
