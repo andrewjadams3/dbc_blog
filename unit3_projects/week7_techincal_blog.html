@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Andrew Adams | DBC</title>
+	<meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0">
+	<link rel="stylesheet" type="text/css" href="../stylesheets/reset.css">
+	<link rel="stylesheet" type="text/css" href="../stylesheets/style.css">
+	<link href='http://fonts.googleapis.com/css?family=Raleway:200,300,700' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" href="../font-awesome/css/font-awesome.min.css">
+</head>
+<body>
+	<div id="page-wrap">
+		<header>
+			<h1 id="andrew-small">Andrew</h1>
+			<div id="gravatar-div"><img src="http://www.gravatar.com/avatar/5591d19f8a18d8147b479d097b5c5f07?s=125" id="gravatar" /></div>
+			<h1 id="header-title">Andrew <span id="adams">Adams</span></h1>
+			<h2 id="header-sub">Learning Full Stack Rails Development</h2>
+			<h1 id="adams-small">Adams</h1>
+		</header>
+
+		<nav>
+			<a href="#"><div class="nav-button">Home</div></a>
+			<a href="#"><div class="nav-button">About</div></a>
+			<a href="#"><div class="nav-button">Projects</div></a>
+			<a href="mailto:andrewjadams3@gmail.com"><div class="nav-button">Contact</div></a>
+		</nav>
+
+		<section class="content">
+			<h3 class="post-date">June 5, 2014</h3>
+			<h2 class="post-title">Week 7 Technical Blog: SQL or NoSQL?</h2>
+			<div class="post">
+				<p>This week I have been learning quite a bit about relational databases. Specifically, I have been learning to use SQL to construct queries. Most relational databases rely on some variant of SQL to manage and manipulate data, so knowing how to use it is an important skill. However, the popularity of non-relational, or distributed databases, is on the rise. Typically, these are referred to as NoSQL, due to the fact that they do not rely on SQL to manage their data.</p>
+				<p>While the name NoSQL isn't particularly clever, the way these databases manage data is quite unique. In fact, each NoSQL DBMS (database management system) allows for various implementations of data models that aren't restricted to the table-like structures of SQL (relational) databases. Key-value pairs are often used, which allows data to be stored hierarchically in data objects similar to JSON or XML. The flexibility of these types of nested structures make them ideal for large amounts of data (i.e. big data). However, the fluid nature of NoSQL databases makes them more difficult to query, and by not adhering to standard SQL, the power of their queries is diminished.</p>
+				<p>So which is better? There are a lot of opinions on this, but the concensus seems to be (as with most technology): it depends.</p>
+				<p>NoSQL databases, such as MongoDB, are becoming quite popular due to the advancements in and demand for big data. However, as mentioned before, their data is more difficult to query, and many argue that they aren't nearly as reliable as relational databases. Also, there are many instances in which a tabular structure provided by a relational database is simply more appropriate (for example, a database of website users and their information).</p>
+				<p>I am looking forward to using and experimenting with both SQL and NoSQL databases in the coming months. Perhaps afterwards I will report back with a much firmer (and decidedly more passionate) opinion. Until then, you'll just have to try them out for yourself!</p>
+			</div>
+		</section>
+
+		<footer>
+			<div id="icons">
+				<a href="https://github.com/andrewjadams3" target="_blank" title="GitHub"><i class="fa fa-github-square fa-lg"></i></a>
+				<a href="https://twitter.com/andrewjadams3" target="_blank" title="Twitter"><i class="fa fa-twitter-square fa-lg"></i></a>
+				<a href="http://www.linkedin.com/in/andrewjadams3" target="_blank" title="LinkedIn"><i class="fa fa-linkedin-square fa-lg"></i></a>
+				<a href="mailto:andrewjadams3@gmail.com" title="Email"><i class="fa fa-envelope fa-lg"></i></a>
+			</div>
+			<span id="icon-spacer"> | </span>
+			<div id="copyright">Copyright &copy; 2014 - Andrew Adams</div>
+		</footer>
+	</div>
+</body>
